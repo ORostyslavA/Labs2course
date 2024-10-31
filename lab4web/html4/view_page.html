@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vouchers</title>
+    <link rel="stylesheet" href="../styles4/styles4.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__title">My Vouchers</h1>
+                <nav class="header__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="view_page.html">My Vouchers</a></li>
+                        <li class="menu__item"><a href="create_page.html">Add Voucher</a></li>
+                    </ul>
+                </nav>
+                <div class="header__search">
+                    <input type="text" id="find_input" class="form-control" placeholder="Search">
+                    <button id="search_button" class="header__button btn-search">Search</button>
+                    <button id="clear_button" class="header__button btn-clear">Clear</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="page" role="main">
+            <section class="page__main main-block">
+                <div class="main-block__container">
+                    <div class="content">
+                        <div class="sort">
+                            <h2 id="manage-voucher" class="sort__title">Manage Voucher</h2>
+                            <div class="sort-block">
+                                <span>Sort by the most expensive voucher:</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="sort_checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="count">
+                            <p>Count total price:</p>
+                            <div class="count__buttons">
+                                <button id="count_button" class="count__button">Count</button>
+                                <button id="count_clear_button" class="count__button-clear">Clear</button>
+                            </div>
+                            <div class="count__num">
+                                <p>Total price: <span id="sumprice">€0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-blocks" id="items_container">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="../js4/lab4.js"></script>
+</body>
+
+</html>
