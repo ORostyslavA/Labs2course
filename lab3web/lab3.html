@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist vouchers</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+3" rel="stylesheet">
+    <link rel="stylesheet" href="./styleslab3ros/styles3.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <nav class="header__menu">
+                    <p class="header__title">Tourist vouchers</p>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="">Main page</a></li>
+                        <li class="menu__item"><a href="create_page.html">Add a ticket</a></li>
+                    </ul>
+                </nav>
+                <div class="header__search">
+                    <input id="find_input" type="text" class="form-control" placeholder="Search...">
+                    <button id="search_button" class="header__button btn-search">Search</button>
+                    <button id="clear_button" class="header__button btn-clear">Clear</button>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <section class="page__main main-block">
+                <div class="main-block__container">
+                    <div class="content">
+                        <div class="sort">
+                            <h1 class="sort__title">Management of tourist vouchers</h1>
+                            <div class="sort-block">
+                                <p class="sort-block__parag">Sort by alphabet:</p>
+                                <label id="sort_checkbox" class="switch">
+                                    <input type="checkbox" checked="">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <p class="count__parag">Total price:</p>
+                            <div class="count__buttons">
+                                <button id="count_button" class="count__button">Count</button>
+                                <button id="count_clear_button" class="count__button-clear">Clear</button>
+                            </div>
+                            <div class="count__num">
+                                <p class="count__num-tittle">Total price: </p>
+                                <p id="sumprice" class="count__num-num">0 €</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="items_container" class="content-blocks">
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/France.jfif" alt="France" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">France</h2>
+                                    <p class="cards__parag">Duration: 7 days</p>
+                                    <p class="cards__price">Price: 1200 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/Italy.jfif" alt="Italy" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">Italy</h2>
+                                    <p class="cards__parag">Duration: 10 days</p>
+                                    <p class="cards__price">Price: 1500 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/Greece.jfif" alt="Greece" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">Greece</h2>
+                                    <p class="cards__parag">Duration: 5 днів</p>
+                                    <p class="cards__price">Price: 800 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/Spain.jfif" alt="Spain" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">Spain</h2>
+                                    <p class="cards__parag">Duration: 14 days</p>
+                                    <p class="cards__price">Price: 1700 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/Turkey.jfif" alt="Turkey" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">Turkey</h2>
+                                    <p class="cards__parag">Duration: 6 days</p>
+                                    <p class="cards__price">Price: 900 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/Egypt.jfif" alt="Egypt" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">Egypt</h2>
+                                    <p class="cards__parag">Duration: 8 days</p>
+                                    <p class="cards__price">Price: 1100 €</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cards__content">
+                            <div class="cards__wrapper">
+                                <img src="./imglab3ros/Thailand.jfif" alt="Thailand" class="cards__img">
+                                <div class="cards__body">
+                                    <h2 class="cards__title">Thailand</h2>
+                                    <p class="cards__parag">Duration: 12 days</p>
+                                    <p class="cards__price">Price: 2000€</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="./jslab3ros/lab3.js"></script>
+</body>
+
+</html>
