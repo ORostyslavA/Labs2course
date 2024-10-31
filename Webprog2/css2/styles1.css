@@ -1,0 +1,1274 @@
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+
+body {
+    line-height: 1;
+    font-family: "Mullish";    
+       
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+/* =============================== */
+
+[class*="__container"] {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+@media (min-width: 2560px) {
+    [class*="__container"] {
+        max-width: 2450px;
+    }
+}
+
+@media (max-width: 2559.98px) {
+    [class*="__container"] {
+        max-width: 1050px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    [class*="__container"] {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 990.98px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        max-width: none;
+        padding: 0px 15px;
+    }
+}
+
+
+/* =============================== */
+
+.header {
+    font-family: Mulish;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+    min-height: 103px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__burger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__burger.active {
+    transform: rotate(90deg);
+}
+
+.header__burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #233348;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header__burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(13px, -13px);
+}
+
+/* Стиль для бургер-меню на екранах 768px */
+/* Стиль для бургер-меню на екранах 768px */
+@media (max-width: 768px) {
+    .header__burger {
+        display: flex;
+        position: absolute;
+        top: 60%;
+        right: 0px;
+        margin-right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .header__menu {
+        display: none;
+        position: absolute;
+        top: 85px;
+        /* Відступ від хедера, щоб меню було біля нього */
+        right: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .header__menu.menu--active {
+        display: block;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+}
+
+/* Активація бургер-меню */
+.header__burger.active+.header__menu {
+    display: block;
+}
+
+@media(max-width: 767.98px) {
+    .header__container {
+        min-height: 0;
+        margin-bottom: 100px;
+    }
+}
+
+.header__logo__left {
+    min-height: 103px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+/* Стиль для логотипа на екранах 768px */
+@media (max-width: 768px) {
+    .header__logo__left {
+        justify-content: flex-start;
+    }
+
+    .header__burger {
+        margin-right: 10px;
+        right: 0;
+        position: absolute;
+    }
+}
+.back__logo {
+    width: 41px;
+    height: 41px;
+    background: #458FF6;
+    background: #458FF6;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #233348;
+}
+
+.header__menu {
+
+}
+
+/* =============================== */
+
+.menu {
+
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 5px;
+}
+
+.menu__item {
+    margin: 5px 0;
+}
+
+.menu__link{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--1f1534-hyfen, #1F1534);
+}
+
+/* =============================== */
+
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+    .menu__list {
+        justify-content: center;
+    }
+}
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+/* Стиль для сторінки */
+.page {
+    position: relative;
+    background-image: url(/image2/element1.svg);
+    margin-left: 0;
+    margin-top: 110px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    font-family: Mulish;
+}
+
+/* Контейнер основного блоку */
+.main-block__container {
+    position: relative;
+    padding-top: 140px;
+}
+
+/* Вирівнювання контенту і слайдера */
+.body-main-block {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Контентна частина займає 50% */
+.body-main-block__content {
+    flex: 0 1 50%;
+}
+
+/* Слайдер також займає 50% */
+.body-main-block__slider {
+    flex: 0 1 50%;
+    min-width: 0;
+}
+
+/* Картинка адаптивна */
+.img1 {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    margin-top: -80px;
+}
+
+/* Текстові стилі */
+.content-main-block__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 25px;
+}
+
+.content-main-block__text {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.content-main-block__button {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    border-radius: 55px;
+    background: #458FF6;
+    width: 200px;
+    height: 56px;
+    flex-shrink: 0;
+    margin-top: 48px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-main-block__button:hover,
+.content-main-block__button2:hover,
+.before-frames__button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-main-block__button:active,
+.content-main-block__button2:active,
+.place__button:active,
+.before-frames__button:active {
+    transform: scale(0.95);
+}
+
+/* Адаптація для екранів до 320px */
+@media (max-width: 320px) {
+
+    /* Контейнер основного блоку: вертикальне вирівнювання */
+    .body-main-block {
+        flex-direction: column;
+        margin-top: 80px;
+        /* Стає вертикальним */
+    }
+
+    /* Контент */
+    .body-main-block__content {
+        flex: 1 1 100%;
+        padding-right: 0;
+        /* Відміняємо відступи справа */
+    }
+
+    /* Картинка адаптивно зменшується, але не зникає */
+    .body-main-block__slider {
+        flex: 1 1 100%;
+        min-width: 0;
+        margin-top: 20px;
+    }
+
+    .img1 {
+        width: 100%;
+        /* Картинка зменшується відповідно до ширини екрану */
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /* Заголовок і текст зменшуються, але залишаються читабельними */
+    .content-main-block__title {
+        font-size: 24px;
+        /* Зменшуємо розмір заголовка */
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .content-main-block__text {
+        font-size: 16px;
+        /* Зменшуємо текст */
+        line-height: 24px;
+    }
+
+    /* Кнопка стає меншою */
+    .content-main-block__button {
+        font-size: 16px;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+
+.page__main2 {}
+
+.main-block2 {}
+
+.main-block__container2 {
+    position: relative;
+    padding-top: 210px;
+}
+
+.main-block__body2 {}
+
+.body-main-block2 {
+    display: flex;
+    flex-direction: row;
+    gap: 142px;
+}
+
+.body-main-block__content2 {
+    flex: 0 1 50%;
+}
+
+.content-main-block2 {}
+
+.body-main-block__img2 {
+    flex: 0 1 50%;
+    min-width: 0;
+}
+
+.img2 {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.content-main-block__body2 {}
+
+.content-main-block__title2 {
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 50px;
+}
+
+.content-main-block__text2 {
+    color: #7D7987;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.content-main-block__button2 {
+    width: 200px;
+    height: 54.826px;
+    flex-shrink: 0;
+    border: 1.4px solid #458FF6;
+    border-radius: 55px;
+    background: #FFF;
+    color: #458FF6;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 39px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 320px) {
+    .body-main-block2 {
+        flex-direction: column;
+        gap: 20px;
+        /* Менший простір між елементами */
+    }
+
+    .body-main-block__content2,
+    .body-main-block__img2 {
+        flex: 0 1 100%;
+    }
+
+    .content-main-block__title2 {
+        font-size: 24px;
+        /* Зменшення розміру заголовка */
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .content-main-block__text2 {
+        font-size: 14px;
+        /* Зменшення розміру тексту */
+        line-height: 22px;
+    }
+
+    .content-main-block__button2 {
+        width: 100%;
+        /* Зменшення ширини кнопки */
+        height: 44px;
+        font-size: 14px;
+        /* Зменшення розміру шрифту */
+        line-height: 46px;
+        margin-top: 20px;
+    }
+
+    .main-block__container2 {
+        padding-top: 100px;
+        /* Менший відступ зверху для маленьких екранів */
+    }
+}
+
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+
+
+.middle__page {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.services {
+    max-width: 800px;
+    /* Обмежуємо ширину секції */
+    margin: 0 auto;
+    /* Центруємо секцію на сторінці */
+    padding: 0 15px;
+    /* Відступи для мобільних екранів */
+}
+
+.services__title {
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 20px;
+    /* Відступ до риски */
+}
+
+.line {
+    border-radius: 5px;
+    background: #000;
+    width: 10%;
+    /* Ширина риски */
+    height: 2px;
+    margin: 0 auto 20px;
+    /* Центруємо риску і додаємо відступи */
+}
+
+.middle__paragraph {
+    color: #7D7987;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 0 auto;
+    max-width: 800px;
+    /* Обмежуємо ширину тексту */
+}
+
+
+
+/* Медіа-запити для 320px */
+@media (max-width: 320px) {
+    .services__title {
+        font-size: 24px;
+        /* Зменшуємо заголовок для маленьких екранів */
+        line-height: 32px;
+    }
+
+    .middle__paragraph {
+        font-size: 14px;
+        /* Зменшуємо текст */
+        line-height: 22px;
+    }
+
+    .line {
+        width: 40%;
+        /* Зменшуємо ширину риски */
+    }
+}
+
+
+
+@media (max-width: 320px) {
+
+    /* Вирівнювання тексту по центру */
+    .content-main-block__body,
+    .content-main-block__title,
+    .content-main-block__text,
+    .content-main-block__button,
+    .content-main-block__title2,
+    .content-main-block__text2,
+    .content-main-block__button2 {
+        text-align: center;
+    }
+
+
+}
+
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+
+
+.space__frames1 {
+    display: flex;
+    /* Вирівнюємо всі елементи в рядок */
+    justify-content: space-between;
+    /* Рівномірно розміщуємо фрейми по горизонталі */
+    gap: 20px;
+    /* Відстань між фреймами */
+    max-width: 1100px;
+    /* Максимальна ширина контейнера */
+    margin: 0 auto;
+    /* Центруємо контейнер */
+    padding: 0 30px;
+    margin-top: 30px;
+}
+
+.frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Вирівнюємо елементи по вертикалі */
+    align-items:first baseline;
+    /* Центруємо елементи в середині фрейму */
+    padding: 20px;
+    /* Внутрішні відступи для зручності */
+    border-radius: 20px;
+    background: #FFF;
+    /* drop shadow */
+    box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.40);
+    /* Колір фону фреймів */
+    border-radius: 10px;
+    /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь для фреймів */
+    width: 25%;
+    /* Ширина кожного фрейму */
+    text-align: start;
+    /* Текст вирівняний по центру */
+    margin-top: 40px;
+}
+
+.frame img {
+    max-width: 100%;
+    /* Адаптуємо зображення до розміру контейнера */
+    height: auto;
+    /* Зберігаємо пропорції зображення */
+    margin-bottom: 20px;
+    /* Відступ між зображенням та заголовком */
+}
+
+.frame1__title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 56px;
+    /* Відступ між заголовком і параграфом */
+}
+
+.frame1__paragraph {
+    color: #7D7987;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    /* Колір тексту параграфу */
+}
+
+/* Додамо адаптивність для маленьких екранів */
+@media (max-width: 768px) {
+    .space__frames1 {
+        flex-direction: column;
+        /* На маленьких екранах фрейми розміщуються один під одним */
+    }
+
+    .frame {
+        width: 100%;
+        /* Ширина фреймів на всю ширину екрану */
+        margin-bottom: 20px;
+        /* Відступ між фреймами */
+    }
+}
+
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+
+.space__frame2 {
+    display: flex;
+    /* Вирівнюємо всі елементи в рядок */
+    justify-content: space-between;
+    /* Рівномірно розміщуємо фрейми по горизонталі */
+    gap: 20px;
+    /* Відстань між фреймами */
+    max-width: 1100px;
+    /* Максимальна ширина контейнера */
+    margin: 0 auto;
+    /* Центруємо контейнер */
+    padding: 0 30px;
+    margin-top: 50px;
+}
+
+.back-image__frame {
+    position: absolute;
+    top: 1400px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.frame2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Вирівнюємо елементи по вертикалі */
+    align-items: first baseline;
+    /* Центруємо елементи в середині фрейму */
+    padding: 20px;
+    /* Внутрішні відступи для зручності */
+    border-radius: 20px;
+    background: #FFF;
+    /* drop shadow */
+    box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.40);
+    /* Колір фону фреймів */
+    border-radius: 10px;
+    /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь для фреймів */
+    width: 25%;
+    /* Ширина кожного фрейму */
+    text-align: start;
+    /* Текст вирівняний по центру */
+}
+
+
+
+.frame2 img {
+    max-width: 100%;
+    /* Адаптуємо зображення до розміру контейнера */
+    height: auto;
+    /* Зберігаємо пропорції зображення */
+    margin-bottom: 15px;
+    /* Відступ між зображенням та заголовком */
+}
+
+.frame2__title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+.frame2__paragraph {
+    color: #7D7987;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.frame, .frame2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    padding: 20px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: start;
+    margin-top: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Додаємо плавну анімацію зміни розмірів */
+}
+
+.frame:hover, .frame2:hover {
+    transform: scale(1.05); /* Збільшуємо фрейм на 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Додаємо тінь при збільшенні */
+}
+
+
+.place__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Закріплює кнопку в нижній частині екрану */
+    margin-top: 70px;
+    /* Відступ віднизу */
+    left: 0%;
+    /* Вирівнює кнопку по горизонталі */
+}
+
+.before-frames__button {
+    color: #458FF6;
+    background: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    border-radius: 55px;
+    border: 1.4px solid #458FF6;
+    width: 200px;
+    height: 56px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Адаптивність для маленьких екранів */
+@media (max-width: 320px) {
+    .place__button {
+        margin-top: 5px;
+        /* Зменшити відступ віднизу */
+    }
+
+    .before-frames__button {
+        font-size: 14px;
+        /* Зменшити шрифт для маленьких екранів */
+        width: 90%;
+        /* Зменшити ширину кнопки */
+        height: auto;
+        /* Зменшити висоту кнопки */
+    }
+}
+
+/* Адаптивність для маленьких екранів */
+@media (max-width: 768px) {
+    .space__frame2 {
+        flex-direction: column;
+        /* Фрейми один під одним */
+    }
+
+    .frame2 {
+        width: 100%;
+        /* Фрейми займають всю ширину на маленьких екранах */
+        margin-bottom: 20px;
+        /* Відступ між фреймами */
+    }
+}
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+.footer {
+    position: relative;
+    margin-top: 100px;
+    padding: 20px;
+    /* Додаємо відступи для внутрішнього простору */
+    background: linear-gradient(183deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Дозволяє елементам переходити на новий рядок при потребі */
+    padding: 20px;
+}
+
+.footer__text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Відстань між елементами всередині .footer__text */
+}
+
+.back2 {
+    width: 41px;
+    height: 41px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5B9BF3;
+    font-size: 26px;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.footer__title {
+    color: #FFF;
+    font-family: Mulish, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 30px;
+    
+    
+    /* Зменшили відстань для менших екранів */
+}
+
+.footer__nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 50px;
+}
+
+.footer__nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: Mulish, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 50px;
+}
+
+
+
+/* Для маленьких екранів (320px) */
+@media (max-width: 320px) {
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__text {
+        margin-bottom: 10px;
+    }
+
+    .footer__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer__nav {
+        gap: 15px;
+        /* Зменшили відстань для маленьких екранів */
+    }
+
+    .footer__nav-item a {
+        font-size: 14px;
+    }
+
+    .back2 {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Адаптація для 4K екрану */
+@media (min-width: 2560px) {
+
+
+.header {
+        font-size: calc(2 * 1em);
+        /* Пропорційне збільшення базового розміру шрифту */
+    }
+
+    .header__container {
+        min-height: calc(2 * 90px);
+        /* Збільшена висота хедера */
+        padding-top: calc(2 * 10px);
+        /* Збільшені відступи зверху і знизу */
+        padding-bottom: calc(2 * 10px);
+    }
+
+    /* Лого */
+    .back__logo {
+        width: calc(2 * 41px);
+        /* Пропорційно збільшено розмір лого */
+        height: calc(2 * 41px);
+        font-size: calc(2 * 22px);
+        /* Збільшено шрифт тексту в логотипі */
+    }
+
+    .header__logo {
+        font-size: calc(2 * 24px);
+        /* Пропорційно збільшено шрифт назви логотипу */
+    }
+
+    .menu__list {
+        gap: calc(2 * 40px);
+        /* Збільшуємо відстань між пунктами меню */
+    }
+
+    .menu__link {
+        font-size: calc(2 * 18px);
+        /* Пропорційно збільшуємо шрифт пунктів меню */
+    }
+
+    /* Контейнер для меню при мобільних пристроях */
+    .header__menu.menu--active {
+        padding: calc(2 * 20px) calc(2 * 15px);
+
+    }
+
+    /* Основний контейнер */
+    [class*="__container"] {
+        max-width: 2400px;
+    }
+
+    /* Центрування тексту та розташування нижче в контейнерах */
+    .content-main-block__title,
+    .content-main-block__title2 {
+        font-size: calc(1.5 * 30px);
+        /* Пропорційно збільшуємо розмір тексту */
+        line-height: calc(1.5 * 32px);
+        /* Центруємо текст */
+        margin-top: 270px;
+        /* Зсуваємо текст трохи вниз */
+    }
+
+    .content-main-block__text,
+    .content-main-block__text2 {
+        font-size: calc(1.5 * 30px);
+        /* Пропорційно збільшуємо розмір тексту */
+        line-height: calc(1.5 * 32px);
+        /* Центруємо текст */
+        margin-top: 75px;
+        /* Зсуваємо текст трохи вниз */
+        }
+
+    .middle__page {
+        margin-top: calc(2 * 40px);
+        /* Збільшуємо відступ зверху */
+        width: calc(1 * 100%);
+        /* Ширина залишається 100% */
+        height: auto;
+        text-align: center;
+        /* Центруємо текст */
+        padding-bottom: calc(2 * 50px);
+        /* Збільшуємо відступ знизу */
+    }
+
+    /* Пропорційне збільшення тексту всередині .middle__page */
+    .middle__page h1,
+    .middle__page h2,
+    .middle__page p {
+        font-size: calc(2 * 24px);
+        /* Більше збільшуємо шрифти */
+        line-height: calc(2 * 32px);
+        /* Пропорційне збільшення міжрядкових інтервалів */
+        margin-bottom: calc(2 * 20px);
+        /* Пропорційне збільшення відступів між елементами */
+    }
+
+    /* Збільшуємо заголовок секції */
+    .middle__page .services__title {
+        font-size: calc(2 * 36px);
+        /* Пропорційне збільшення заголовка */
+        margin-bottom: calc(2 * 20px);
+        /* Пропорційне збільшення відступу між заголовком і контентом */
+    }
+
+    .middle__page .middle__paragraph {
+        font-size: calc(2 * 18px);
+        /* Пропорційне збільшення шрифту параграфа */
+        line-height: calc(2 * 30px);
+        /* Пропорційне збільшення міжрядкових інтервалів */
+        margin: 0 auto;
+        /* Центруємо текст */
+        max-width: calc(2 * 800px);
+        /* Збільшуємо максимальну ширину */
+    }
+
+    /* Лінія під заголовком */
+    .middle__page .line {
+        width: calc(2 * 10%);
+        /* Пропорційно збільшуємо ширину лінії */
+        height: calc(2 * 2px);
+        /* Пропорційне збільшення висоти лінії */
+        margin-bottom: calc(2 * 20px);
+        /* Збільшуємо відступ під лінією */
+    }
+
+    /* Збільшення фреймів пропорційно */
+    .frame,
+    .frame2 {
+        padding: calc(1.5 * 20px);
+        margin-top: calc(1.5 * 40px);
+        width: calc(1.5 * 150%);
+        /* Пропорційне збільшення фреймів */
+        box-shadow: 0 calc(1.5 * 4px) calc(1.5 * 6px) rgba(0, 0, 0, 0.1);
+        text-align: start;
+    }
+
+    /* Зображення у фреймах */
+    .frame img,
+    .frame2 img {
+        max-width: 100%;
+        height: auto;
+        /* Пропорційно збільшуємо зображення */
+        margin-bottom: 20px;
+    }
+
+    /* Текст у фреймах */
+    .frame1__title,
+    .frame2__title {
+        font-size: calc(1.5 * 24px);
+        line-height: calc(1.5 * 56px);
+    }
+
+    .frame1__paragraph,
+    .frame2__paragraph {
+        font-size: calc(1.5 * 16px);
+        line-height: calc(1.5 * 28px);
+    }
+
+    /* Відступи та розміри фреймів */
+    .space__frames1,
+    .space__frame2 {
+        gap: calc(1.5 * 20px);
+        max-width: calc(1.5 * 1100px);
+        padding: 0 calc(1.5 * 30px);
+        margin-top: calc(1.5 * 50px);
+    }
+
+    .content-main-block__button,
+    .content-main-block__button2,
+    .before-frames__button {
+        font-size: calc(1.5 * 18px);
+        /* Пропорційно збільшуємо шрифт кнопок */
+        width: calc(1.5 * 200px);
+        /* Пропорційно збільшуємо ширину */
+        height: calc(1.5 * 56px);
+        /* Пропорційно збільшуємо висоту */
+        line-height: calc(1.5 * 60px);
+        /* Вирівнювання тексту по центру */
+        justify-content: center;
+    }
+    
+    /* Контейнер для кнопок перед фреймами */
+    .place__button {
+        margin-top: calc(1.5 * 70px);
+        /* Збільшуємо відступ зверху */
+    }
+
+    /* Центрування і підняття елементів у футері */
+    .footer__content {
+        /* Центруємо елементи футера */
+        align-items: center;
+        /* Вирівнюємо по вертикалі */
+        padding-top: 20px;
+        /* Піднімаємо елементи трохи вище */
+    }
+
+    .footer__nav {
+        display: flex;
+        justify-content: center;
+        gap: calc(1.2 * 30px);
+        /* Зменшуємо відстань між пунктами меню */
+        padding-top: 10px;
+        margin-right: 200px;
+        /* Піднімаємо текст футера */
+    }
+
+    .footer__text {
+        margin-bottom: 10px;
+        /* Зменшений відступ знизу */
+        justify-content: center;
+        /* Центруємо текст футера */
+        margin-left: 200px;
+    }
+
+    .footer__title {
+        font-size: calc(1.5 * 24px);
+        /* Пропорційно збільшуємо текст футера */
+    }
+
+    .footer__nav-item a {
+        font-size: calc(1.5 * 18px);
+        /* Пропорційно збільшуємо шрифт навігації */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./normalize.min1.css";
+
+@import "./global1.css";
+
+@import "./header1.css";
+
+@import "./hero1.css";
+
+@import "./footer1.css";
+
+@import "./"
