@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "Italy",
+        "text": "Italy offers art, architecture, and culinary delights.",
+        "imgpath": "/gems_images/Italy.jfif",
+        "price": 140,
+        "city": "by_the_sea"
+    },
+    {
+        "id": 2,
+        "title": "Greece",
+        "text": "Greece boasts ancient ruins, sunny islands, and a rich mythological past.",
+        "imgpath":"/gems_images/Greece.jfif",
+        "price": 210,
+        "city": "by_the_sea"
+    },
+    {
+        "id": 3,
+        "title": "Spain",
+        "text": "Spain is famous for its vibrant culture, stunning beaches, and lively festivals.",
+        "imgpath": "/gems_images/Spain.jfif",
+        "price": 556,
+        "city": "by_the_sea"
+    },
+    {
+        "id": 4,
+        "title": "Poland",
+        "text": "Poland is a land of beautiful medieval cities, picturesque landscapes, and a deep historical heritage.",
+        "imgpath": "/gems_images/poland.jfif",
+        "price": 312,
+        "city": "near_the_mountains"
+    },
+    {
+        "id": 5,
+        "title": "Thailand",
+        "text": "Thailand offers exotic beaches, vibrant markets, and stunning temples.",
+        "imgpath": "/gems_images/Thailand.jfif",
+        "price": 98,
+        "city": "by_the_sea"
+    },
+    {
+        "id": 6,
+        "title": "Egypt",
+        "text": "Egypt is home to ancient wonders like the pyramids.",
+        "imgpath": "/gems_images/Egypt.jfif",
+        "price": 411,
+        "city": "by_the_sea"
+    },
+    {
+        "id": 7,
+        "title": "Turkey",
+        "text": "Turkey bridges Europe and Asia with its rich history, stunning beaches, and bustling bazaars.",
+        "imgpath": "/gems_images/Turkey.jfif",
+        "price": 55,
+        "city": "by_the_sea"
+    },
+    {
+        "id": 8,
+        "title": "Georgia",
+        "text": "Georgia is known for its breathtaking mountain views, delicious wines, and warm hospitality.",
+        "imgpath": "/gems_images/georgia.jfif",
+        "price": 540,
+        "city": "near_the_mountains"
+    }
+]
