@@ -1,0 +1,59 @@
+a {
+    color: #ffffff;
+    /* Зміна кольору тексту для кращої видимості */
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    /* Жирний текст */
+    transition: color 0.3s ease;
+    /* Анімація кольору тексту */
+}
+
+.navigation {
+    width: 495px;
+    height: 51px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333333;
+    /* Темний фон */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Тінь */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Анімація фону та тіні */
+}
+
+.navigation ul {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    /* Додати відступи */
+}
+
+.navigation li {
+    list-style: none;
+    width: 150px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    /* Задати радіус за замовчуванням */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Анімація при наведенні */
+}
+
+.navigation li:hover {
+    background-color: #555555;
+    /* Світліший фон при наведенні */
+    transform: scale(1.05);
+    /* Збільшення при наведенні */
+}
+
+.navigation li:hover a {
+    color: #ffcc00;
+    /* Зміна кольору тексту при наведенні */
+}

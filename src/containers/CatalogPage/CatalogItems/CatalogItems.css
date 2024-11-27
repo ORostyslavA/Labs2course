@@ -1,0 +1,11 @@
+.catalog_content {
+    margin: 0 50px;
+}
+
+.catalog_cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin-bottom: 80px;
+}

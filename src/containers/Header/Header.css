@@ -1,0 +1,59 @@
+.header {
+    height: 70px;
+    background-color: #ffffff;
+    /* Світлий фон */
+    border-bottom: 1px solid #e0e0e0;
+    /* Легка межа знизу */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Тінь для заголовка */
+}
+
+.logo {
+    width: 80px;
+    transition: transform 0.3s ease;
+    /* Анімація при наведенні */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    /* Збільшення логотипа при наведенні */
+}
+
+.search {
+    border: 1px solid #007bff;
+    /* Синя межа */
+    text-align: center;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 180px;
+    height: 40px;
+    /* Збільшена висота */
+    padding: 10px;
+    /* Збільшене внутрішнє відступ */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Анімації */
+}
+
+.search:focus {
+    border-color: #0056b3;
+    /* Темніша межа при фокусуванні */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Тінь при фокусуванні */
+    outline: none;
+    /* Прибрали стандартну обводку */
+}
+
+.search::placeholder {
+    color: #999999;
+    /* Світлий колір тексту заповнювача */
+}
+
+.search:hover {
+    border-color: #0056b3;
+    /* Зміна кольору межі при наведенні */
+}

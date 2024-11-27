@@ -1,0 +1,84 @@
+footer {
+    padding: 20px 50px;
+    background-color: #f8f9fa;
+    /* Світлий фон */
+    border-top: 1px solid #e0e0e0;
+    /* Легка межа зверху */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    /* Тінь для футера */
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    /* Відступ внизу */
+}
+
+.footer_content_logo {
+    width: 80px;
+}
+
+.footer_content_text {
+    width: 300px;
+    padding: 10px 0;
+}
+
+.footer_content_text h3 {
+    font-size: 22px;
+    /* Збільшений розмір шрифту */
+    padding: 5px;
+    color: #444444;
+    /* Темніший колір заголовка */
+    transition: color 0.3s ease;
+    /* Анімація кольору */
+}
+
+.footer_content_text p {
+    font-size: 16px;
+    padding: 5px;
+    color: #666666;
+    /* Світліший колір тексту */
+}
+
+.footer_content_text h3:hover {
+    color: #007bff;
+    /* Зміна кольору заголовка при наведенні */
+}
+
+.footer_content_icons {
+    width: 300px;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+.footer_content_icons a {
+    margin-left: 10px;
+    /* Відстань між іконками */
+    transition: transform 0.3s ease;
+    /* Анімація при наведенні */
+}
+
+.footer_content_icons a:hover {
+    transform: scale(1.2);
+    /* Збільшення іконок при наведенні */
+}
+
+.footer_autor p {
+    text-align: center;
+    font-size: 15px;
+    color: #777777;
+    /* Світліший колір */
+    padding: 20px;
+    margin: 0;
+    /* Прибрали маржу */
+    transition: color 0.3s ease;
+    /* Анімація кольору */
+}
+
+.footer_autor p:hover {
+    color: #007bff;
+    /* Зміна кольору при наведенні */
+}
